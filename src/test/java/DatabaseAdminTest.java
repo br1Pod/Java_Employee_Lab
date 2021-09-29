@@ -14,6 +14,21 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void hasName() {
+        assertEquals("Lenny Leonard", databaseAdmin.getName());
+    }
+
+    @Test
+    public void hasNiNumber() {
+        assertEquals("AD 34 56 78 D", databaseAdmin.getNiNumber());
+    }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(30000.00, databaseAdmin.getSalary(), 0.01);
+    }
+
+    @Test
     public void canRaiseSalary() {
         databaseAdmin.raiseSalary(1.1);
         assertEquals(33000.00, databaseAdmin.getSalary(), 0.01);
