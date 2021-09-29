@@ -14,6 +14,21 @@ public class DeveloperTest {
     }
 
     @Test
+    public void hasName() {
+        assertEquals("Homer Simpson", developer.getName());
+    }
+
+    @Test
+    public void hasNiNumber() {
+        assertEquals("AB 23 45 67 C", developer.getNiNumber());
+    }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(40000.00, developer.getSalary(), 0.01);
+    }
+
+    @Test
     public void canRaiseSalary() {
         developer.raiseSalary(1.1);
         assertEquals(44000.00, developer.getSalary(), 0.01);
