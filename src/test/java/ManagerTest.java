@@ -14,6 +14,26 @@ public class ManagerTest {
     }
 
     @Test
+    public void hasName() {
+        assertEquals("Mr Smithers", manager.getName());
+    }
+
+    @Test
+    public void hasDeptName() {
+        assertEquals("HR", manager.getDeptName());
+    }
+
+    @Test
+    public void hasNiNumber() {
+        assertEquals("AB 12 34 56 C", manager.getNiNumber());
+    }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(60000.00, manager.getSalary(), 0.01);
+    }
+
+    @Test
     public void canRaiseSalary() {
         manager.raiseSalary(1.1);
         assertEquals(66000.00, manager.getSalary(), 0.01);
