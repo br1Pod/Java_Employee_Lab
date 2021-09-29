@@ -1,5 +1,7 @@
 package staff;
 
+import static java.lang.Math.abs;
+
 public abstract class Employee {
 
     private String name;
@@ -17,7 +19,9 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null) {
+            this.name = name;
+        }
     }
 
     public String getNiNumber() {
@@ -38,7 +42,7 @@ public abstract class Employee {
 
 
     public void raiseSalary(Double raise){
-        this.salary *= raise;
+        abs(this.salary *= raise);
     }
 
     public Double payBonus(){
